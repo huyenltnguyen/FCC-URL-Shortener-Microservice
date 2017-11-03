@@ -1,0 +1,29 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huyenltnguyen/FCC-URL-Shortener-Microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huyenltnguyen/FCC-URL-Shortener-Microservice/issues"
+  },
+  "homepage": "https://github.com/huyenltnguyen/FCC-URL-Shortener-Microservice#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
+    "shortid": "^2.2.8",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
