@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="/style.css">
+	<title>URL Shortener Microservice</title>
+</head>
+<body>
+	<div class="container">
+		<h1>URL Shortener Microservice</h1>
+		<section>
+			<h2>User stories:</h2>
+			<ul>
+				<li> I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+				<li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+				<li>When I visit that shortened URL, it will redirect me to my original link.</li>
+			</ul>	
+		</section>
+		
+		<section>
+			<h2>Example usage:</h2>
+			<a href="https://even-cap.glitch.me/December%2015,%202015">https://even-cap.glitch.me/December%2015,%202015</a>
+			<a href="https://even-cap.glitch.me/1450137600">https://even-cap.glitch.me/1450137600</a>
+		</section>
+
+		<section>
+			<h2>Example output:</h2>			
+				<pre>
+{ 
+	"unix": 1450137600,
+	"natural": "December 15, 2015"
+}
+				</pre>
+				
+			
+		</section>		
+	</div>	
+</body>
+</html>
