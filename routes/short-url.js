@@ -1,10 +1,10 @@
 var express	= require('express');
 var router 	= express.Router();
 var Result 	= require('../models/result');
-var rootUrl = process.env.ROOT_URL || 'http://localhost:3000';
+var rootUrl = process.env.ROOT_URL || 'http://localhost:3000/';
 
 router.get('/:string', function(req, res) {
-	var url = rootUrl + req.url;	
+	var url = rootUrl + req.params.string;	
 
 	Result.findOne({short_url: url}, function(err, foundResult) {
 		if (err) {
