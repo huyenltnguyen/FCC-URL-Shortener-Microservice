@@ -27,6 +27,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-pre {
-	line-height: 150%;
+.json-property {
+	padding: 4px 15px;
 }
