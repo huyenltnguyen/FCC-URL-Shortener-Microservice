@@ -1,5 +1,5 @@
 var express = require('express');
-var shortid = require('shortid');
+var nanoid = require('nanoid');
 var router = express.Router();
 var Result = require('../models/result');
 var middleware = require('../middleware');
@@ -10,12 +10,11 @@ router.get('/new/:url*', middleware.isValidUrl, middleware.isInDatabase, functio
 
   Result.create({
     original_url: url,
-    short_url: `${rootUrl}${shortid.generate()}`
+    short_url: `${rootUrl}${nanoid()}`
   }, function(err, result) {
       if (err) {
         res.json({ error: 'Something went wrong' });
       } else {
-        console.log(result);
         res.json(
           {
             original_url: result.original_url,
